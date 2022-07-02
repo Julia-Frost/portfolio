@@ -1,0 +1,159 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  line-height: 1.2;
+  font-size: 14px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+input {
+  font-family: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.visualy-hiden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Оформление */
+
+.header {
+  padding: 20px 0;
+  background: linear-gradient(#fcd078, #ffffff);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.navigation-link {
+}
+
+.contacts {
+  position: relative;
+}
+.contacts-list {
+  display: none;
+  position: absolute;
+}
+
+.social-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  background: radial-gradient(circle, #faa554 0%, #ff5571 100%);
+  border-radius: 50%;
+  padding: 5px;
+  fill: #ffffff;
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* steck section */
+
+.steck-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.steck-list {
+  display: flex;
+  align-items: center;
+}
+
+.steck-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.steck-name {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.portfolio {
+  padding: 20px 0;
+  background: linear-gradient(#ffffff, #eecf85, #ffffff);
+}
+
+.portfolio__subtitle {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.project {
+}
+
+.project__item {
+}
+
+.project__content {
+  padding: 10px;
+}
