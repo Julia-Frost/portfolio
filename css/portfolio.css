@@ -71,7 +71,6 @@ svg {
 
 .header {
   background-color: #9b9292;
-  padding: 20px 0;
   box-shadow: inset 0px 0px 20px 0px #00000090;
 }
 
@@ -83,7 +82,45 @@ svg {
 }
 
 .navigation-link {
+  position: relative;
+  display: block;
+  padding: 20px 0;
   color: #ffede0ec;
+  overflow: hidden;
+}
+
+.navigation-link::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  width: 100%;
+  height: 3px;
+  display: block;
+  background-color: rgb(143, 240, 114);
+  transform: translateX(100%);
+  transition: transform 300ms linear 250ms, background-color 350ms linear 300ms;
+}
+
+.navigation-link::after {
+  content: '';
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  height: 3px;
+  display: block;
+  background-color: salmon;
+  transform: translateX(-100%);
+  transition: transform 300ms linear, background-color 350ms linear;
+}
+
+.navigation-item:hover .navigation-link::before {
+  transform: translateX(-100%);
+  background-color: rgb(94, 180, 241);
+}
+
+.navigation-item:hover .navigation-link::after {
+  transform: translateX(100%);
+  background-color: rgb(229, 229, 87);
 }
 
 .navigation-text {
@@ -163,6 +200,12 @@ svg {
 .portfolio {
   background-color: #f5f4fa;
   padding: 20px 0;
+  background: linear-gradient(
+    90deg,
+    rgba(245, 244, 250, 1) 0%,
+    rgba(250, 249, 245, 1) 50%,
+    rgba(245, 244, 250, 1) 100%
+  );
 }
 
 .portfolio-subtitle {
@@ -295,12 +338,12 @@ svg {
     max-width: 738px;
   }
 
-  .header {
-    padding: 30px 0;
-  }
-
   .navigation-list {
     justify-content: space-around;
+  }
+
+  .navigation-link {
+    padding: 30px 0;
   }
 
   /* about section */
